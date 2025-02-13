@@ -1,0 +1,11 @@
+name: CI/CD Pipeline
+'on':
+  push: {}
+  pull_request: {}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build and Test
+        uses: actions/checkout@v2
+        run: npm install && npm test
